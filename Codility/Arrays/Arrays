@@ -1,0 +1,27 @@
+#TS: 66% C: 100% P: 25%
+def solution(A):
+    print("Test")
+    for i in A:
+        occurrence = A.count(i)
+        if occurrence % 2 != 0:
+            return i
+
+#TS: 66% C: 80% P: 50%
+from collections import Counter
+
+
+def solution(A):
+    counted = Counter(A)
+    print(counted)
+    x = min(counted, key=counted.get)
+    print(x)
+
+#TS: 100% C: 100% P: 100%
+from collections import Counter
+
+
+def solution(A):
+    counted = Counter(A)
+    for k in counted:
+        if counted[k] % 2 != 0:
+            return k
